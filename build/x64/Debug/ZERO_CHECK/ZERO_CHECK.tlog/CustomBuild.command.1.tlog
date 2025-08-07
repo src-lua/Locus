@@ -1,0 +1,10 @@
+^D:\LOCUS\BUILD\CMAKEFILES\6629170AB6E1BE5C3F1A378FDFF366C5\GENERATE.STAMP.RULE
+setlocal
+C:\msys64\mingw64\bin\cmake.exe -SD:/Locus -BD:/Locus/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/Locus/build/Locus.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
